@@ -1,0 +1,112 @@
+.gHeader {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: var(--c-ffffff);
+  transition: all 0.5s ease-out 0s;
+}
+.mainHeader.gShrink {
+  position: fixed;
+  background: var(--c-ffffff);
+  transition: all 0.5s ease-out 0s;
+  z-index: 999;
+  box-shadow: 0px 1px 12px 0px #ffffffab;
+}
+.offcanvasMenu {
+  width: 100%;
+  display: inline-block;
+}
+.mainMenu {
+  padding: 0;
+}
+.mainNav {
+  width: 100%;
+  position: relative;
+}
+.mainMenu :global(.navbar) {
+  padding: 0;
+}
+.logoImg .mainLogo {
+  width: 200px;
+  display: inline-block;
+}
+
+/* nav links */
+.mainNav :global(.nav-item:last-child) {
+  margin-right: 0;
+}
+.mainNav :global(.nav-item .nav-link) {
+  position: relative;
+  display: block;
+  font-size: var(--fs-18);
+  color: var(--c-000000);
+  font-weight: var(--fw-Regular);
+  line-height: initial;
+  padding: 30px 18px;
+}
+.mainNav :global(.nav-item .nav-link:focus),
+.mainNav :global(.nav-item .nav-link:hover),
+.mainNav :global(.nav-item .nav-link.active),
+.mainNav :global(.nav-item .nav-link.show) {
+  color: var(--c-0355AC);
+}
+
+/* dropdown (only if you use one) */
+.mainNav :global(.dropdown-toggle)::after {
+  margin-left: 10px;
+  position: relative;
+  top: 9px;
+  background-image: url("../../../assets/images/icons/dropdown-arrow.png");
+  border: none;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.mainNav :global(.navbar-nav .dropdown .dropdown-menu) {
+  min-width: 250px;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  z-index: 1000;
+  background: var(--c-ffffff);
+}
+.mainNav :global(.navbar-nav .dropdown .dropdown-menu li) {
+  border-bottom: solid 1px var(--c-333233);
+  border-left: none;
+}
+.mainNav :global(.navbar-nav .dropdown .dropdown-menu li a) {
+  font-size: var(--fs-17);
+  color: var(--c-000000);
+  font-weight: var(--fw-Regular);
+  display: inline-block;
+  padding: 12px;
+}
+.mainNav :global(.navbar-nav .dropdown .dropdown-menu li:hover) {
+  background: var(--c-1e58b4);
+}
+.mainNav :global(.navbar-nav .dropdown .dropdown-menu li:hover a) {
+  color: var(--c-ffffff);
+}
+
+/* offcanvas: desktop only, so the mobile slide-in still works */
+@media (min-width: 992px) {
+  .offcanvasMenu :global(.offcanvas-body) {
+    overflow-y: unset;
+    padding: 0;
+  }
+  .offcanvasMenu :global(.offcanvas.offcanvas-start) {
+    transform: unset;
+    border-right: unset;
+    background: transparent;
+    width: 100%;
+    position: relative;
+    visibility: visible;
+  }
+}
