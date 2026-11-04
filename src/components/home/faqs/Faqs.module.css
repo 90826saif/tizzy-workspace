@@ -1,0 +1,81 @@
+.faqKicker {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: var(--c-BCDAF9);
+  color: var(--c-1E1E1E);
+  font-size: var(--fs-12);
+  line-height: var(--lh-12);
+  font-weight: var(--fw-SemiBold);
+  box-shadow: 0px 4px 4px 0px #0059ff1f inset;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.faqSection :global(.main-title) {
+  margin-bottom: 8px;
+}
+
+.faqList {
+  margin-top: 28px;
+  --bs-accordion-border-width: 0;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-active-color: var(--c-0355AC);
+  --bs-accordion-active-bg: var(--c-E6F1FD);
+  --bs-accordion-btn-icon-width: 14px;
+}
+
+.faqList .accordionItem {
+  margin-bottom: 20px;
+  border: 0;
+  border-left: 5px solid var(--c-0355AC);
+  border-radius: 7px;
+  background: var(--c-F5F8FC);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(16, 42, 72, 0.04);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.faqList .accordionItem:last-child {
+  margin-bottom: 0;
+}
+
+.faqList .accordionButton {
+  padding: 24px 22px;
+  background: var(--c-F5F8FC);
+  color: var(--c-131B2E);
+  font-size: var(--fs-20);
+  line-height: var(--lh-20);
+  font-weight: var(--fw-Medium);
+  box-shadow: none;
+}
+
+.faqList .accordionButton:hover,
+.faqList .accordionButton:not(.collapsed) {
+  background: var(--c-E6F1FD);
+  box-shadow: none;
+}
+
+.faqList .accordionButton::after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/icons/chevron-down.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  transition: transform 0.35s ease;
+}
+
+.faqList .accordionBody {
+  padding: 0 22px 18px;
+  background: var(--c-E6F1FD);
+  color: var(--c-131B2E);
+  font-size: var(--fs-16);
+  line-height: 26px;
+}
